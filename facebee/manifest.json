@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "Facebook but with Bees",
+  "description": "Facebook. But all posts are the trailer to the Bee Movie.",
+  "version": "1.0",
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "css": ["bee.css"],
+      "js": ["facebees.js"],
+	  "run_at":     "document_start",
+      "all_frames": true
+    }
+  ],
+  
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+	"default_title": "BEES!"
+  }
+
+}
